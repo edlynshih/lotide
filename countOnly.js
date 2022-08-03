@@ -12,7 +12,7 @@ const countOnly = function (allItems, itemsToCount) {
   const results = {};
 
   for (const item of allItems) {
-    if (!itemsToCount[item]) {
+    if (!itemsToCount[item]) { // itemsToCount[item] outputs the value of the key("Jason", Karima") in itemsToCount which is true, ture...etc
       continue;
     }
 
@@ -26,6 +26,7 @@ const countOnly = function (allItems, itemsToCount) {
 }
 
 
+
 const firstNames = [
   "Karl",
   "Salima",
@@ -37,6 +38,8 @@ const firstNames = [
   "Fang",
   "Joe"
 ];
+
+console.log(countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false }));
 
 const result1 = countOnly(firstNames, { "Jason": true, "Karima": true, "Fang": true, "Agouhanna": false });
 

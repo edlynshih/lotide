@@ -16,6 +16,8 @@ console.log(results1);
 
 
 
+
+
 const eqArrays = function (array1, array2) {
   if (array1.length === array2.length) {
     for (let i = 0; i < array1.length; i++) {
@@ -34,6 +36,9 @@ const assertArraysEqual = function (arr1, arr2) {
     console.log(`✅✅✅ Assertion Passed: ${arr1} === ${arr2}`);
   }
 };
+
+
+
 
 const array1 = [1, 4, 9, 16];
 const map1 = map(array1, x => x * 2);
