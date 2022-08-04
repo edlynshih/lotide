@@ -1,21 +1,17 @@
-const assertEqual = require('../assertEqual');
-const tail = require('../tail')
+const assert = require('chai').assert;
+const tail = require('../tail');
 
-const result = tail(["My", "Name", "Is", "Edlyn"]);
-assertEqual(result.length, 3); // ensure we get back three elements
-assertEqual(result[0], "Name"); // ensure first element is "Name"
-assertEqual(result[1], "Is"); // ensure second element is "Is"
+describe("#tail", () => {
+  it("returns [2, 3] for [1, 2, 3]", () => {
+    assert.deepEqual(tail([1, 2, 3]), [2, 3]);
+  });
 
+  it("returns ['Name', 'Is', 'Edlyn'] for ['My', 'Name', 'Is', 'Edlyn']", () => {
+    assert.deepEqual(tail(['My', 'Name', 'Is', 'Edlyn']), ['Name', 'Is', 'Edlyn']); 
+  });
 
-// Test Case: Check the original array
-const words = ["Yo Yo", "Edlyn", "Shih"];
-tail(words); // no need to capture the return value since we are not checking it
-assertEqual(words.length, 3); // original array should still have 3 elements!
+  it("returns an empty array for []", () => {
+    assert.deepEqual(tail([]), []);
+  });
 
-// Test Case: An array with only one element should yield an empty array for its tail
-const check = ["Hi"];
-console.log(tail(check)); // Output should be an empty array
-
-// An empty array should yield an empty array for its tail
-const test = [];
-console.log(tail(test)); // Output should be an empty array
+});
