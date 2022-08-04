@@ -34,12 +34,16 @@ const letterPositions = function(sentence) {
   }
   return results;
 };
-console.log(letterPositions('lighthouse in the house'));
 
-assertArraysEqual({h:[0], e: [1], l: [2,3], o: [4]}.h, [0]);
-assertArraysEqual(letterPositions("hello").e, [1]);
-assertArraysEqual(letterPositions("hello").l, [2, 3]);
-assertArraysEqual(letterPositions("hello").o, [4]);
+
+// console.log(letterPositions('lighthouse in the house'));
+
+// assertArraysEqual({h:[0], e: [1], l: [2,3], o: [4]}.h, [0]);
+// assertArraysEqual(letterPositions("hello").e, [1]);
+// assertArraysEqual(letterPositions("hello").l, [2, 3]);
+// assertArraysEqual(letterPositions("hello").o, [4]);
+
+module.exports = letterPositions;
 
 // {
 // h: [0],
