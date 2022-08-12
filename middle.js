@@ -1,20 +1,15 @@
 const middle = function (array) {
-  let middleEle = [];
-  let arrlength = Math.floor(array.length/2);
-  if(array.length <= 2) {
-    return middleEle;
+  let ans = [];
+  const index = Math.floor(array.length / 2)
+  if (array.length <= 2) {
+    return ans;
   }
-  if(array.length > 2) {
-    if(array.length % 2 === 0) {
-      middleEle.push(array[arrlength-1]);
-      middleEle.push(array[arrlength]);
-      return middleEle;
-    }
-    if(array.length % 2 !== 0) {
-      middleEle.push(array[arrlength]);
-      return middleEle;
-    }
+  if (array.length % 2 !== 0) {
+    ans.push(array[index]);
+  } else {
+    ans.push(array[index - 1], array[index]);
   }
+  return ans;
 }
 
  module.exports = middle;
