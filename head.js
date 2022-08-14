@@ -1,6 +1,5 @@
 const head = function(array) {
-  let firstEle = array[0];
-  return firstEle;
+  return array[0];
 }
 
 module.exports = head;
