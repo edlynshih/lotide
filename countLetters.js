@@ -1,18 +1,18 @@
 const assertEqual = require('./assertEqual');
 
-const countLetters = function (sentence) {
+const countLetters = function(sentence) {
   const results = {};
-  const newSen = sentence.toLowerCase().replace(/\s/g, "");
-  for (let letter of newSen) {
+  const string = sentence.toLowerCase().replace(/\s/g, "");
+  for (const letter of string) {
     if (!results[letter]) {
-      results[letter] = 0;
-    } 
-    results[letter]++
+      results[letter] = 1;
+    } else {
+      results[letter]++;
+    }
   }
   return results;
 }
 
 module.exports = countLetters;
 
-// const result1 = countLetters("lighthouse in the house");
-// console.log(result1);
+console.log(countLetters("lighthouse in the house"));
