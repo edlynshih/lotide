@@ -1,8 +1,5 @@
-const assertEqual = require('./assertEqual');
 const eqArrays = require('./eqArrays');
-ß
-// Returns true if both objects have identical keys with identical values.
-// Otherwise you get back a big fat false!
+
 const eqObjects = function (object1, object2) {
   let keyObj1 = Object.keys(object1);
   let keyObj2 = Object.keys(object2);
