@@ -35,6 +35,7 @@ The following functions are currently implemented:
 * `eqObjects`: Take in two objects and returns true or false, based on a perfect match. 
 * `findKey`: Takes in an object and a callback. It should scan the object and return the first key for which the callback returns a truthy value.
 * `findKeyByValue`: Takes in an object and a value. It should scan the object and return the first key which contains the given value.
+* `flatten`: Take in an array containing elements including nested arrays of elements, and return a "flattened" version of the array.
 * `head`:  Retrieve the first element from the array.
 * `letterPositions`: Take in a string and return all the indices (zero-based positions) in the string where each character is found.
 * `map`: Take in an array and a callback function and return a new array based on the results of the callback function.
